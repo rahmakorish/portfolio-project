@@ -1,46 +1,56 @@
-<div class="contact container m-auto py-5" id="contact">
-  <h2 class="display-5 fw-bolder text-center">Contact Us.</h2>
-  <div class="contact-links container-fluid m-5 px-5 row justify-content-center align-items-center">
-    
-    <!-- Email -->
-    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
-      <a [href]="'mailto:' + contactData.email" class="text-decoration-none">
-        <div class="text-center text-break py-5">
-          <h5 class="fw-bold">Email</h5>
-          <p class="text-muted text-black-50 fw-medium">{{ contactData.email }}</p>
-        </div>
-      </a>
-    </div>
+<section id="contact" class="py-5 bg-background text-text">
+  <div class="container">
+    <h2 class="display-5 fw-bolder text-center text-primary mb-5">Contact Us.</h2>
+    <div class="row justify-content-center">
+      
+      <!-- Email -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <a [href]="'mailto:' + contactData.email" class="text-decoration-none text-text">
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">Email</h5>
+              <p class="text-muted">{{ contactData.email }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
-    <!-- LinkedIn -->
-    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
-      <a [href]="contactData.linkedin" target="_blank" class="text-decoration-none">
-        <div class="text-center text-break py-5">
-          <h5 class="fw-bold">LinkedIn</h5>
-          <p class="text-muted text-black-50 fw-medium">{{ contactData.linkedin }}</p>
-        </div>
-      </a>
-    </div>
+      <!-- LinkedIn -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <a [href]="contactData.linkedin" target="_blank" class="text-decoration-none text-text">
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">LinkedIn</h5>
+              <p class="text-muted">{{ contactData.linkedin }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
-    <!-- Phone -->
-    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
-      <a [href]="'tel:' + contactData.phone" class="text-decoration-none">
-        <div class="text-center text-break py-5 px-2">
-          <h5 class="fw-bold">Phone</h5>
-          <p class="text-muted text-black-50 fw-medium">{{ contactData.phone }}</p>
-        </div>
-      </a>
-    </div>
+      <!-- Phone -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <a [href]="'tel:' + contactData.phone" class="text-decoration-none text-text">
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">Phone</h5>
+              <p class="text-muted">{{ contactData.phone }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
-    <!-- Github -->
-    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
-      <a [href]="contactData.Github" target="_blank" class="text-decoration-none">
-        <div class="text-center text-break py-5">
-          <h5 class="fw-bold">Github</h5>
-          <p class="text-muted text-black-50 fw-medium">{{ contactData.Github }}</p>
-        </div>
-      </a>
-    </div>
+      <!-- Github -->
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <a [href]="contactData.Github" target="_blank" class="text-decoration-none text-text">
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">Github</h5>
+              <p class="text-muted">{{ contactData.Github }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
 
+    </div>
   </div>
-</div>
+</section>

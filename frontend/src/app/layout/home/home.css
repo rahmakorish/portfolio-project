@@ -1,26 +1,23 @@
-.home{
-    background-image: url('https://res.cloudinary.com/dnfwp1qmq/image/upload/v1759244536/cld-sample-2.jpg');
+/* Custom styles for home section, integrating with Bootstrap and theme variables */
+#home {
+    /* background-image: url('https://res.cloudinary.com/dnfwp1qmq/image/upload/v1759244536/cld-sample-2.jpg'); */
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
-.home .home-text{
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    color:white;
-}
-.home .home-text h1{
-  color: white;
+
+#home h1 {
+  color: var(--primary); /* Use primary color for the name */
   font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   animation: typeAndDelete 5s steps(14) infinite;
-  border-right: 2px solid white; /* blinking cursor effect */
+  border-right: 2px solid var(--text); /* blinking cursor effect using text color */
 }
-.home .home-text .home-links a .fa{
-    background-color: rgba(0, 0, 0, 0.2);
-    color:white;
+
+.icon-wrapper {
+  width: 60px;
+  height: 60px;
 }
 
 @keyframes type-writer {
@@ -45,7 +42,7 @@
 }
 @keyframes blink {
   0%, 100% { border-color: transparent; }
-  50% { border-color: white; }
+  50% { border-color: var(--text); } /* Use text color for blinking cursor */
 }
 
 /* Typing and deleting effect */

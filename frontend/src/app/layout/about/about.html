@@ -1,30 +1,22 @@
-<div class="about container row justify-content-between align-items-center text-center py-5 m-auto" id="about">
-        <div class="about-image img-fluid w-50 h-50 col-md-12">
-            <!-- <img [src]="'http://localhost:3000/uploads/' +about.imgURL" alt="{{about.name}}" class="img-fluid w-100"> -->
-        <img src ='https://res.cloudinary.com/dnfwp1qmq/image/upload/v1759259881/aboutimg_lgrslc.jpg' alt="{{about.name}}" class="img-fluid w-100">
-          </div>
-        <div class="about_text text-start col-lg-6 col-md-12">
-        <h4 class="fw-bold display-5">About Me.</h4>
+<section id="about" class="py-5 bg-background text-text">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center">
+        <img src='https://res.cloudinary.com/dnfwp1qmq/image/upload/v1759259881/aboutimg_lgrslc.jpg' alt="{{about.name}}" class="img-fluid rounded shadow-lg">
+      </div>
+      <div class="col-12 col-lg-6 text-center text-lg-start">
+        <h4 class="fw-bold display-5 text-primary mb-4">About Me.</h4>
         <div *ngIf="about">
-  <p class="text-muted text-black-50">{{ about.role }}</p>
-  <p class="text-muted text-break text-black-50 fw-medium lead">
-    I am <b>{{ about.name }}</b> {{ about.aboutText }}
-  </p>
-</div>
-
-
-        
-        <div class="about-buttons py-4">
-        <div class="btn-group">
-        <div class="downloadbutton mx-1">
-           <a href="https://drive.google.com/file/d/1BFy8wkkAOS3OmXLEGDqu6tr6R2mWDg4n/view?usp=sharing" target="_blank" download> <button class="btn btn-dark btn-outline-light border border-dark px-4">Download C.V</button>
-        </a>
+          <p class="lead text-secondary">{{ about.role }}</p>
+          <p class="text-muted lead">
+            I am <b class="text-text">{{ about.name }}</b> {{ about.aboutText }}
+          </p>
         </div>
-        <div class="contactbutton ">
-          <button class="btn btn-outline-dark pg-dark px-4"><a routerLink="../contact" class="nav-link"> Contact me</a></button>
+        <div class="d-flex justify-content-center justify-content-lg-start mt-4">
+          <a href="https://drive.google.com/file/d/1BFy8wkkAOS3OmXLEGDqu6tr6R2mWDg4n/view?usp=sharing" target="_blank" download class="btn btn-primary me-3">Download C.V</a>
+          <a routerLink="../contact" class="btn btn-outline-primary">Contact me</a>
         </div>
-        </div>
+      </div>
     </div>
-    
-</div>
-    </div>
+  </div>
+</section>
