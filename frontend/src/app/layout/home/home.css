@@ -1,0 +1,65 @@
+.home{
+    background-image: url('https://res.cloudinary.com/dnfwp1qmq/image/upload/v1759244536/cld-sample-2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.home .home-text{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:white;
+}
+.home .home-text h1{
+  color: white;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typeAndDelete 5s steps(14) infinite;
+  border-right: 2px solid white; /* blinking cursor effect */
+}
+.home .home-text .home-links a .fa{
+    background-color: rgba(0, 0, 0, 0.2);
+    color:white;
+}
+
+@keyframes type-writer {
+    
+}
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  25% {
+    width: 10ch; /* "Develope |" is 10 characters */
+  }
+  50% {
+    width: 10ch;
+  }
+  75% {
+    width: 0ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+/* Typing and deleting effect */
+@keyframes typeAndDelete {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 14ch; /* full length of "Rahma Korish |" */
+  }
+  60% {
+    width: 14ch;
+  }
+  100% {
+    width: 0;
+  }
+}

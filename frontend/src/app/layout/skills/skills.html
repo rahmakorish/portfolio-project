@@ -1,0 +1,20 @@
+<div class="services container-fluid my-5 py-5" id="services">
+    <h2 class="display-5 fw-bolder text-center">Services.</h2>
+    <div class="services-cards container-fluid my-5 px-5 row justify-content-center align-items-center">
+
+        <div class="col-md-12 col-lg-4 my-3" *ngFor="let skill of skillData">
+            <div class="card shadow-lg" >
+                <div class="card-body text-center text-break py-5 px-2">
+                <span class="d-flex justify-content-center align-items-center w-25 h-25 mx-auto">
+                    <i class="fa fa-solid fa-laptop fa-2x border-0 rounded-5 p-3"></i>
+                </span>
+                    <h5 class="fw-bold">{{skill.skill}}</h5>
+                    <p class="text-muted text-black-50 fw-medium lead">{{skill.skillDetails}}</p>
+                </div>
+                <!-- <button> <a routerLink="/dashboard/updateskills/" class="nav-link">update</a></button> -->
+            </div>
+        </div>
+
+
+    </div>
+    </div>

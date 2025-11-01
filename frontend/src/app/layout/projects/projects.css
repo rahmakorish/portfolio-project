@@ -1,0 +1,47 @@
+
+.portfolio .item .content{
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  transition: top 0.3s ease-in-out;
+}
+.portfolio .item:hover .content{
+  top:0;
+}
+.portfolio .item:hover::after{
+  opacity:1;
+}
+.portfolio .item::after{
+  content:"";
+  opacity: 0;
+  position: absolute;
+  inset:0;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s ease-in-out;
+}
+.portfolio .nav-tabs{
+  --bs-nav-tabs-border-color:transparent;
+}
+.portfolio .nav-tabs .nav-link{
+  --bs-nav-link-color: black;
+}
+.portfolio .nav-tabs .nav-link:hover{
+  --bs-nav-link-hover-color: black;
+}
+.portfolio .nav-tabs .nav-link.active{
+  --bs-nav-tabs-link-active-border-color: transparent transparent transparent;
+}
+.portfolio .nav-tabs .nav-link.active:after{
+  content: '';
+  display: block;
+  margin: 4px 0 0 0;
+  width: 100%;
+  height: 2px; 
+  background-color: currentColor; 
+}
+.portfolio .nav-tabs .nav-link:hover{
+  --bs-nav-tabs-link-hover-border-color: transparent transparent transparent;
+}

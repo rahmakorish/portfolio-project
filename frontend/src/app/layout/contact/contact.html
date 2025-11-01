@@ -1,0 +1,46 @@
+<div class="contact container m-auto py-5" id="contact">
+  <h2 class="display-5 fw-bolder text-center">Contact Us.</h2>
+  <div class="contact-links container-fluid m-5 px-5 row justify-content-center align-items-center">
+    
+    <!-- Email -->
+    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
+      <a [href]="'mailto:' + contactData.email" class="text-decoration-none">
+        <div class="text-center text-break py-5">
+          <h5 class="fw-bold">Email</h5>
+          <p class="text-muted text-black-50 fw-medium">{{ contactData.email }}</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
+      <a [href]="contactData.linkedin" target="_blank" class="text-decoration-none">
+        <div class="text-center text-break py-5">
+          <h5 class="fw-bold">LinkedIn</h5>
+          <p class="text-muted text-black-50 fw-medium">{{ contactData.linkedin }}</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
+      <a [href]="'tel:' + contactData.phone" class="text-decoration-none">
+        <div class="text-center text-break py-5 px-2">
+          <h5 class="fw-bold">Phone</h5>
+          <p class="text-muted text-black-50 fw-medium">{{ contactData.phone }}</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Github -->
+    <div class="contact-info col-12 col-md-6 col-lg-3 my-3">
+      <a [href]="contactData.Github" target="_blank" class="text-decoration-none">
+        <div class="text-center text-break py-5">
+          <h5 class="fw-bold">Github</h5>
+          <p class="text-muted text-black-50 fw-medium">{{ contactData.Github }}</p>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>

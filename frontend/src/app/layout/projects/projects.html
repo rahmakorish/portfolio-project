@@ -1,0 +1,45 @@
+<!-- 📂 Projects -->
+<section id="projects" class="container">
+  <h2>Projects</h2>
+  <div class="row">
+    
+    <!-- Looping through projects -->
+    <div class="col-md-4" *ngFor="let project of projectData">
+      <div class="card h-100 shadow-sm">
+        <!-- Project Image -->
+        <!-- <img [src]="'http://localhost:3000/uploads/' + project.imgURL"> -->
+        <img 
+          src="https://res.cloudinary.com/dnfwp1qmq/image/upload/v1759259804/Screenshot_2025-09-30_194228_h4snfk.png" 
+          class="card-img-top" 
+          alt="{{ project.name }}"
+        >
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ project.name }}</h5>
+          <p class="card-text flex-grow-1">{{ project.description }}</p>
+
+          <!-- Deployment Link -->
+          <a [href]="project.deployment" target="_blank" class="btn btn-primary mb-2">
+            Live Demo
+          </a>
+
+          <!-- GitHub Link -->
+          <a [href]="project.githubLink" target="_blank" class="btn btn-outline-dark">
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Project Card (appears once) -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm d-flex align-items-center justify-content-center">
+        <div class="card-body text-center">
+          <a href="/dashboard/updateprojects/" class="btn btn-success btn-lg">
+            + Create New Project
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

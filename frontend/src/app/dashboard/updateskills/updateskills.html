@@ -1,0 +1,43 @@
+<div class="body container">
+    <div class="row">
+        <!-- Update Form -->
+        <!-- <div class="col-md-6">
+            <div class="form-container">
+                <form [formGroup]="skillsform" (ngSubmit)="submitform()">
+                    <h2>Update Skills</h2>
+                    <div class="form-group">
+                        <label for="updateSkill">Update Skill:</label>
+                        <textarea formControlName="skill" id="updateSkill" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateDetails">Update Details:</label>
+                        <textarea formControlName="skillDetails" id="updateDetails" rows="1"></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" value="UPDATE SKILL" />
+                    </div>
+                </form>
+            </div>
+        </div> -->
+
+        <!-- Create Form -->
+        <div class="col-md-6">
+            <div class="form-container">
+                <form [formGroup]="createForm" (ngSubmit)="createSkill()">
+                    <h2>Create Skill</h2>
+                    <div class="form-group">
+                        <label for="newSkill">Skill:</label>
+                        <textarea formControlName="newskill" id="newSkill" rows="1"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="newDetails">Details:</label>
+                        <textarea formControlName="newskillDetails" id="newDetails" rows="1"></textarea>
+                    </div>
+                    <div class="form-group text-center">
+                        <input type="submit" value="CREATE SKILL" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

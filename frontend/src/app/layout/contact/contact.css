@@ -1,0 +1,15 @@
+
+.contact .contact-links .contact-info .fa{
+  background-color: rgba(0, 0, 0, 0.1);
+  width:60px;
+}
+.contact .contact-links .contact-info:hover .fa{
+  background-color: rgba(0, 0, 0, 1);
+  color:white;
+}
+.contact .contact-form input{
+  background-color: #F4F4F4;
+}
+.contact .contact-form textarea{
+  background-color: #F4F4F4;
+}

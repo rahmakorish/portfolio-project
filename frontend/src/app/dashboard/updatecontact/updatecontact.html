@@ -1,0 +1,32 @@
+<div class="body">
+    <div class="form-container">
+        <form [formGroup]="contactform" (ngSubmit)="submitform()">
+            <h2>update contact info</h2>
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="textarea">update phone number:</label>
+                <textarea formControlName="phone" id="textarea" name="about" rows="1"></textarea>
+            </div>
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="textarea">update Email:</label>
+                <textarea formControlName="email" id="textarea" name="about" rows="1"></textarea>
+            </div>
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="textarea">update linkedin:</label>
+                <textarea formControlName="linkedin" id="textarea" name="about" rows="1"></textarea>
+            </div>
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="textarea">update Github Link:</label>
+                <textarea formControlName="Github" id="textarea" name="about" rows="1"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group text-center">
+                <input type="submit" value="UPDATE" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="body container">
+  <div class="row">
+
+    <!-- Update Form
+    <div class="col-md-6">
+      <div class="form-container">
+        <form [formGroup]="updateproject" (ngSubmit)="updateProject()">
+          <h2>Update Project</h2>
+
+          <div class="form-group">
+            <label for="projectname">Project Name:</label>
+            <textarea formControlName="projectname" id="projectname" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="projectdesc">Description:</label>
+            <textarea formControlName="projectdesc" id="projectdesc" rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="githubLink">Github Link:</label>
+            <textarea formControlName="githubLink" id="githubLink" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="deployment">Deployment Link:</label>
+            <textarea formControlName="deployment" id="deployment" rows="1"></textarea>
+          </div>
+
+          <div class="form-group text-center">
+            <input type="submit" value="UPDATE Project" />
+          </div>
+        </form>
+      </div>
+    </div> -->
+
+    <!-- Create Form -->
+    <div class="col-md-6">
+      <div class="form-container">
+        <form [formGroup]="createproject" (ngSubmit)="addproject()">
+          <h2>Create new Project</h2>
+
+          <div class="form-group">
+            <label for="newproject">Project Name:</label>
+            <textarea formControlName="newprojectname" id="newproject" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="newDetails">Description:</label>
+            <textarea formControlName="newprojectdesc" id="newDetails" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="githubLink">Github Link:</label>
+            <textarea formControlName="newgithubLink" id="githubLink" rows="1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="newprojectdeployment">Deployment:</label>
+            <textarea formControlName="newprojectdeployment" id="newprojectdeployment" rows="1"></textarea>
+          </div>
+
+          <div class="form-group text-center">
+            <input type="submit" value="CREATE Project" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

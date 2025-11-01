@@ -1,0 +1,18 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* full height */
+}
+
+/* Sidebar styles */
+app-sidebar {
+  width: 250px;       /* fixed width */
+  background: #2c3e50; /* example background */
+  color: white;
+}
+
+/* Content area styles */
+.dashboard-content {
+  flex: 1;             /* take the remaining space */
+  padding: 20px;
+  background: #f4f6f8; /* light background */
+}
