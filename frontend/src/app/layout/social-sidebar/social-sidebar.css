@@ -1,0 +1,24 @@
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  background-color: #333; /* Dark background for visibility */
+  border-radius: 5px 0 0 5px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.social-sidebar a {
+  color: #fff; /* White icons */
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-sidebar a:hover {
+  color: #007bff; /* Highlight on hover */
+}
