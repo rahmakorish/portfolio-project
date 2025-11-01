@@ -16,10 +16,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
 
 
-const aboutRoute = require('./controllers/about-controller')
-const skillsRoute = require('./controllers/skills-controller')
-const projectsRoute = require('./projects')
-const contactRoute = require('./contact')
+const aboutRoute = require('./routers/about-router')
+const skillsRoute = require('./routers/skills-router')
+const projectsRoute = require('./routers/projects-router')
+const contactRoute = require('./routers/contact-router')
 
 app.use(express.json())
 //routes

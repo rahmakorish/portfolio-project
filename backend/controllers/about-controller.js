@@ -1,5 +1,4 @@
 const express = require('express');
-//import data model
 const aboutData = require('../models/about-model') 
 
 //get data 
