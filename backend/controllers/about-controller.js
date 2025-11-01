@@ -9,11 +9,14 @@ exports.getAboutData =  async(req,res)=>{
 
 //create data at first time
 exports.createAboutData =async (req,res)=>{
-    const {name, aboutText, role}= req.body;
+    const {name, role ,aboutText}= req.body;
     const imgURL= req.file?`/uploads/${req.file.filename}`:null;
     try{
-    const myabout = await aboutData.create({name, role ,aboutText,imgURL})
-        res.status(200).json(myabout)
+
+    const about = new aboutData({name,role,aboutText,imgURL});
+
+    await about.save();
+        res.status(201).json(about);
     }
     catch(err){
         res.status(500).json({error : err.message})

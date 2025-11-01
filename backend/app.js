@@ -6,10 +6,13 @@ const app = express();
 const port = process.env.PORT
 const path = require('path');
 //DB connection:
-const connectDB = require('./config/DB.config')
-connectDB()
-
 const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/portofolioData').
+then(()=>
+console.log('MongoDBconnected'))
+.catch((err)=>console.log(`error: ${err}`));
+// const mongoose = require('mongoose');
 const corsMiddleWare = require('./middlewares/cors.middleware');
 app.use(corsMiddleWare)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

@@ -15,7 +15,8 @@ export class About implements OnInit{
   aboutService = inject(AboutServices)
   about!:IUserData;
   constructor(private cdr: ChangeDetectorRef){}
-
+  staticURL='http://localhost:3000/uploads/'
+  // staticURL:'http://localhost:3000/uploads/'
   ngOnInit(){
     this.aboutService.getAboutData().subscribe(data=>{
       

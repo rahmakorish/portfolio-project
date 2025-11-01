@@ -28,5 +28,5 @@ const contactDataSchema = new mongoose.Schema(
     }
 )
 //create data model
-module.exports = mongoose.model('contactData', contactDataSchema)
+module.exports = mongoose.model('contact Data', contactDataSchema)
 

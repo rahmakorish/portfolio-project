@@ -29,4 +29,4 @@ const projectDataSchema = new mongoose.Schema(
     }
 )
 //create data model
-module.exports = mongoose.model('projectData', projectDataSchema)
+module.exports = mongoose.model('project Data', projectDataSchema)
