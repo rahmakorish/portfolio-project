@@ -1,39 +1,27 @@
+//configure env
+const dotenv = require('dotenv')
+dotenv.config()
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT
+const path = require('path');
+//DB connection:
+const connectDB = require('./config/DB.config')
+connectDB()
+
 const mongoose = require('mongoose');
-const cors = require('cors');
-const multer= require('multer')
-const path = require('path')
-///create connection with data collction
-mongoose.connect('mongodb://localhost:27017/portofolioData').
-then(()=>
-console.log('MongoDBconnected'))
-.catch((err)=>console.log(`error: ${err}`));
+const corsMiddleWare = require('./middlewares/cors.middleware');
+app.use(corsMiddleWare)
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.json());
 
 
-const aboutRoute = require('./about')
-const skillsRoute = require('./skills')
+const aboutRoute = require('./controllers/about-controller')
+const skillsRoute = require('./controllers/skills-controller')
 const projectsRoute = require('./projects')
 const contactRoute = require('./contact')
 
 app.use(express.json())
-// Middleware
-app.use(cors()); 
-// for future imgs uploads
-app.use('/uploads',express.static(path.join(__dirname,'uploads')))
-const storage = multer.diskStorage({
-    destination:(req,file,cb)=>{
-        cb(null, 'uploads')
-    },
-    filename:(req,file,cd)=>{
-        cb(null, Date.now()+'-'+file.originalname)
-    }
-})
-const upload = multer({storage})
-// app.post('/api/upload', upload.single('aboutimg'),(req,res)=>{
-//     res.send('upload success')
-// })
 //routes
 app.use('/about',aboutRoute)
 app.use('/skills',skillsRoute)
@@ -41,9 +29,6 @@ app.use('/projects',projectsRoute)
 app.use('/contact',contactRoute)
 
 
-app.use((req,res)=>{
-    res.send(`<h1>hellooooo</h1>`)
-})
 
 app.listen(port,()=>{
     console.log(`server started successfully at ${port}`)

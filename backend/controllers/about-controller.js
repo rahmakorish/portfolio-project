@@ -1,55 +1,15 @@
 const express = require('express');
-const router = express.Router();
-const multer = require('multer');
-const mongoose = require('mongoose');
+//import data model
+const aboutData = require('../models/about-model') 
 
-// create schema for data
-const aboutDataSchema = new mongoose.Schema(
-        {
-    name:{
-        type:String,
-        required:true,
-        unique:true,
-
-    },
-    role:{
-        type:String,
-        required:true,
-    }
-    ,
-    aboutText:{
-        type:String,
-        required:true,
-    },
-    imgURL:{
-        type:String,
-        required:true
-    }
-    }
-)
-
-
-const storage = multer.diskStorage({
-    destination:(req,file,cb)=>{
-        cb(null, 'uploads/')
-    },
-    filename:(req,file,cb)=>{
-        cb(null, Date.now()+'-'+file.originalname)
-    }
-})
-const upload = multer({storage:storage})
-
-//create data model
-const aboutData = mongoose.model('about Data', aboutDataSchema)
 //get data 
-router.get('/', async(req,res)=>{
-    // container = data model name.find()
+exports.getAboutData =  async(req,res)=>{
     const about = await aboutData.find()
         res.status(200).json(about)
-    })
+}
 
 //create data at first time
-router.post('/', upload.single('img'), async (req,res)=>{
+exports.createAboutData =async (req,res)=>{
     const {name, aboutText, role}= req.body;
     const imgURL= req.file?`/uploads/${req.file.filename}`:null;
     try{
@@ -59,12 +19,12 @@ router.post('/', upload.single('img'), async (req,res)=>{
     catch(err){
         res.status(500).json({error : err.message})
     }
-})
+}
 //update data 
-router.put('/',async (req,res)=>{
+exports.updateAboutData =async (req,res)=>{
     //params from URL
     //text from sent request (body:raw:json)
-   const {name, aboutText, role}= req.body;
+    const {name, aboutText, role}= req.body;
     const imgURL= req.file?`/uploads/${req.file.filename}`:null;
     try{
     const myabout = await aboutData.create({name, role ,aboutText,imgURL})
@@ -73,9 +33,9 @@ router.put('/',async (req,res)=>{
     catch(err){
         res.status(500).json({error : err.message})
     }
-})
+}
 //delete 
-router.delete('/:id',async (req,res)=>{
+exports.deleteAboutData =async (req,res)=>{
     const {id} = req.params;
     try{
     const deletedText = await aboutData.findByIdAndDelete(id)
@@ -91,6 +51,4 @@ router.delete('/:id',async (req,res)=>{
     catch(err){
         res.status(500).json({error : err.message})
     }
-})
-module.exports= router;
-
+}
