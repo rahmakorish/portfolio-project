@@ -30,8 +30,3 @@ const projectDataSchema = new mongoose.Schema(
 )
 //create data model
 module.exports = mongoose.model('projectData', projectDataSchema)
-
-
-
-
-module.exports= router;

@@ -1,5 +1,4 @@
 const express = require('express');
-// import { Skills } from './app/src/app/layout/skills/skills';
 const router = express.Router();
 const multer = require('multer');
 const mongoose = require('mongoose')
@@ -21,4 +20,3 @@ const skillDataSchema = new mongoose.Schema(
 const skillData = mongoose.model('skill Data', skillDataSchema)
 
 
-module.exports= router;

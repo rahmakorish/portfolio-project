@@ -21,16 +21,24 @@ exports.createAboutData =async (req,res)=>{
 }
 //update data 
 exports.updateAboutData =async (req,res)=>{
-    //params from URL
-    //text from sent request (body:raw:json)
+    const {id} = req.params; // Assuming the ID is passed as a URL parameter
     const {name, aboutText, role}= req.body;
     const imgURL= req.file?`/uploads/${req.file.filename}`:null;
+
     try{
-    const myabout = await aboutData.create({name, role ,aboutText,imgURL})
-        res.status(200).json(myabout)
+        const updatedAbout = await aboutData.findByIdAndUpdate(
+            id,
+            { name, role, aboutText, imgURL },
+            { new: true, runValidators: true } // Return the updated document and run schema validators
+        );
+
+        if (!updatedAbout) {
+            return res.status(404).json({ message: 'About data not found' });
+        }
+        res.status(200).json(updatedAbout);
     }
     catch(err){
-        res.status(500).json({error : err.message})
+        res.status(500).json({error : err.message});
     }
 }
 //delete 
