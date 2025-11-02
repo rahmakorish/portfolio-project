@@ -8,10 +8,10 @@ exports.getContactMsg =async(req,res)=>{
 
 //insert multiple data at once
 exports.createContactMsg =async (req,res)=>{
-    const {email,phone,Github,linkedin}= req.body;
+    const {name, email, phone, message}= req.body;
     try{
-    const myContact = await contactData.create({email,phone,Github,linkedin})
-        res.status(200).json(myContact)
+    const contactMsg = await contactData.create({name, email, phone, message})
+        res.status(200).json(contactMsg)
     }
     catch(err){
         res.status(500).json({error : err.message})

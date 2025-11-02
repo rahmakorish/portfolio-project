@@ -7,7 +7,7 @@ import { SocialSidebarComponent } from '../social-sidebar/social-sidebar';
 
 @Component({
   selector: 'app-home',
-  imports: [Contact, SocialSidebarComponent],
+  imports: [Contact, SocialSidebarComponent, Skills, About, Projects],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
