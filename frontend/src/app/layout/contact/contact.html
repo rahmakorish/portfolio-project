@@ -1,56 +1,22 @@
-<section id="contact" class="py-5 bg-background text-text">
-  <div class="container">
-    <h2 class="display-5 fw-bolder text-center text-primary mb-5">Contact Us.</h2>
-    <div class="row justify-content-center">
-      
-      <!-- Email -->
-      <div class="col-12 col-md-6 col-lg-3 mb-4">
-        <a [href]="'mailto:' + contactData.email" class="text-decoration-none text-text">
-          <div class="card h-100 shadow-sm border-0 text-center p-4">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary mb-2">Email</h5>
-              <p class="text-muted">{{ contactData.email }}</p>
+<div class="body">
+    <div class="form-container">
+        <form [formGroup]="contactform" (ngSubmit)="submitform()">
+            <!-- <h2>update contact info</h2> -->
+            <div class="form-group">
+                <label for="textarea">name:</label>
+                <textarea formControlName="name" id="textarea" name="about" rows="1"></textarea>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- LinkedIn -->
-      <div class="col-12 col-md-6 col-lg-3 mb-4">
-        <a [href]="contactData.linkedin" target="_blank" class="text-decoration-none text-text">
-          <div class="card h-100 shadow-sm border-0 text-center p-4">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary mb-2">LinkedIn</h5>
-              <p class="text-muted">{{ contactData.linkedin }}</p>
+            <div class="form-group">
+                <label for="textarea">Email:</label>
+                <textarea formControlName="email" id="textarea" name="about" rows="1"></textarea>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Phone -->
-      <div class="col-12 col-md-6 col-lg-3 mb-4">
-        <a [href]="'tel:' + contactData.phone" class="text-decoration-none text-text">
-          <div class="card h-100 shadow-sm border-0 text-center p-4">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary mb-2">Phone</h5>
-              <p class="text-muted">{{ contactData.phone }}</p>
+            <div class="form-group">
+                <label for="textarea">Message:</label>
+                <textarea formControlName="message" id="textarea" name="about" rows="1"></textarea>
             </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Github -->
-      <div class="col-12 col-md-6 col-lg-3 mb-4">
-        <a [href]="contactData.Github" target="_blank" class="text-decoration-none text-text">
-          <div class="card h-100 shadow-sm border-0 text-center p-4">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary mb-2">Github</h5>
-              <p class="text-muted">{{ contactData.Github }}</p>
+            <div class="form-group text-center">
+                <input type="submit" value="send message" />
             </div>
-          </div>
-        </a>
-      </div>
-
+        </form>
     </div>
-  </div>
-</section>
+</div>

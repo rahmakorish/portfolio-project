@@ -13,10 +13,10 @@ constructor(private http:HttpClient){}
 contactAPI = 'http://localhost:3000/contact/';
 
 getContactData():Observable<IContact[]>{
-  return this.http.get<IContact[]>(this.contactAPI);
+  return this.http.get<IContact[]>(this.contactAPI+'get');
   }
   
 updateContactData(ContactData:IContact):Observable<IContact>{
-    return this.http.put<IContact>(this.contactAPI, ContactData);
+    return this.http.put<IContact>(this.contactAPI+'send', ContactData);
 }
 }

@@ -1,6 +1,5 @@
 export interface IContact{
+    name:string, 
     email:string,
-    phone:string,
-    Github:string, 
-    linkedin:string
+    message:string
 }

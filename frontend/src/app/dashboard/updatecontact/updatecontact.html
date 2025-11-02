@@ -1,32 +1,41 @@
-<div class="body">
-    <div class="form-container">
-        <form [formGroup]="contactform" (ngSubmit)="submitform()">
-            <h2>update contact info</h2>
-            <!-- Textarea -->
-            <div class="form-group">
-                <label for="textarea">update phone number:</label>
-                <textarea formControlName="phone" id="textarea" name="about" rows="1"></textarea>
+<section id="contact" class="py-5 bg-background text-text">
+  <div class="container">
+    <h2 class="display-5 fw-bolder text-center text-primary mb-5">Contact Form</h2>
+    <div class="row justify-content-center">
+      
+      
+     <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <!-- <a [href]="'mailto:' + contactData.name" class="text-decoration-none text-text"> -->
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">name</h5>
+              <p class="text-muted">{{ contactData.name }}</p>
             </div>
-            <!-- Textarea -->
-            <div class="form-group">
-                <label for="textarea">update Email:</label>
-                <textarea formControlName="email" id="textarea" name="about" rows="1"></textarea>
-            </div>
-            <!-- Textarea -->
-            <div class="form-group">
-                <label for="textarea">update linkedin:</label>
-                <textarea formControlName="linkedin" id="textarea" name="about" rows="1"></textarea>
-            </div>
-            <!-- Textarea -->
-            <div class="form-group">
-                <label for="textarea">update Github Link:</label>
-                <textarea formControlName="Github" id="textarea" name="about" rows="1"></textarea>
-            </div>
+          </div>
+        <!-- </a> -->
+      </div>
 
-            <!-- Submit Button -->
-            <div class="form-group text-center">
-                <input type="submit" value="UPDATE" />
+      <div class="col-12 col-md-6 col-lg-3 mb-4">
+        <!-- <a [href]="'mailto:' + contactData.email" class="text-decoration-none text-text"> -->
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">Email</h5>
+              <p class="text-muted">{{ contactData.email }}</p>
             </div>
-        </form>
+          </div>
+        <!-- </a> -->
+      </div>
+
+ <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-4">
+            <div class="card-body">
+              <h5 class="fw-bold text-primary mb-2">message</h5>
+              <p class="text-muted">{{ contactData.message }}</p>
+            </div>
+          </div>
+      </div>
+
+
     </div>
-</div>
+  </div>
+</section>
