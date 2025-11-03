@@ -40,14 +40,10 @@ exports.getSkills= async(req,res)=>{
 exports.hideSkill = async(req,res)=>{
     const {id} = req.params;
     try{
-        const deletedskill = await skillData.findByIdAndDelete({id})
-    if(deletedskill){
-            res.status(201).json(deletedskill)
-
-            }
-            else{
-                res.status(404).json('skill not found')
-            }   
+        const hiddenskill = await skillData.findById({id})
+        // this.hiddenskill.isHidden 
+    if(hiddenskill){res.status(201).json(hiddenskill)}
+    else{res.status(404).json('skill not found')}   
         }
     catch(err){
         res.status(500).json({error:err.message})

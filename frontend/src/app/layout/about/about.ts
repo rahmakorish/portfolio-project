@@ -21,7 +21,7 @@ export class About implements OnInit{
     this.aboutService.getAboutData().subscribe(data=>{
       
   this.about = data[0]
-    console.log(this.about);
+    // console.log(this.about);
     this.cdr.detectChanges();
   })
   

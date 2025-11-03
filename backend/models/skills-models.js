@@ -13,10 +13,13 @@ const skillDataSchema = new mongoose.Schema(
     skillDetails:{
         type:String,
         required:true,
-    },
+    },isHidden:{
+        type:Boolean,
+        default:false
+    }
     }
 )
 //create data model
-const skillData = mongoose.model('skill Data', skillDataSchema)
+const skillData = mongoose.model('skillData', skillDataSchema)
 
 

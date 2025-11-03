@@ -22,8 +22,8 @@ export class Skills implements OnInit {
     //get data from box and listen to it
     this.skillsService.getSkillsData().subscribe({
       next:(skills)=>{
-        this.skillData = skills
-        // console.log(skills);
+        // this.skillData = skills
+        console.log(skills);
         console.log(this.skillData);
         this.cdr.detectChanges()
       }

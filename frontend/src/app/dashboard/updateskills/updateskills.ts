@@ -39,15 +39,16 @@ this.createForm= new FormGroup({
   //     console.log(data);
   //   })}
 createForm!:FormGroup;
-createSkill(){
-  this.skillsService.addSkills({
-    skill:this.createForm.value.newskill,
-    skillDetails:this.createForm.value.newskillDetails
-  }).subscribe(data=>{
-      console.log(data);
-    })
-        this.cdr.detectChanges();
+createSkill(){}
+// createSkill(){
+//   this.skillsService.addSkills({
+//     skill:this.createForm.value.newskill,
+//     skillDetails:this.createForm.value.newskillDetails
+//   }).subscribe(data=>{
+//       console.log(data);
+//     })
+//         this.cdr.detectChanges();
 
-}
+// }
 
 }

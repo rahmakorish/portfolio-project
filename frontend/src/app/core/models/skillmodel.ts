@@ -1,4 +1,5 @@
 export interface ISkill {
     skill:string;
-    skillDetails: string
+    skillDetails: string,
+    isHidden:boolean
 }
